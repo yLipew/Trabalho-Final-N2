@@ -10,9 +10,9 @@
 
 | Integrante | |
 |---|---|
-| Lauro Lobo | |
-| Gustavo de Carvalho | |
-| Felipe Mendonça | |
+| Lauro Lobo |
+| Gustavo de Carvalho |
+| Felipe Mendonça |
 
 ---
 
