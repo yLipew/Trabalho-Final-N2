@@ -8,11 +8,11 @@
 **Trabalho Final N2 — Implementação de Arquitetura RAG**  
 **SENAI Goiás**
 
-| Integrante | |
+| Integrantes |
 |---|---|
-| Lauro Lobo |
-| Gustavo de Carvalho |
-| Felipe Mendonça |
+| Lauro Lobo
+| Gustavo de Carvalho
+| Felipe Mendonça
 
 ---
 
