@@ -238,4 +238,4 @@ Em todos esses casos, depender apenas de embeddings resultaria em buscas impreci
 | sentence-transformers | 2.7+ | Geração de embeddings |
 | rank-bm25 | 0.2+ | Vetores esparsos BM25 |
 | httpx | 0.27+ | Chamadas à API Maritaca |
-| Maritaca (Sabiá-3) | — | Geração de respostas |
+| Maritaca (Sabiá-4) | — | Geração de respostas |
