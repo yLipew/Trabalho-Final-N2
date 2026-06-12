@@ -94,7 +94,7 @@ Artigos sobre IA e LLMs criados para o projeto, cobrindo:
 | `vector_db.txt` | Bancos vetoriais, HNSW, Qdrant |
 | `chunking.txt` | Estratégias de chunking |
 
-**Total:** 12 chunks indexados.
+**Total:** 13 chunks indexados.
 
 ---
 
