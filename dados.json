@@ -1,0 +1,54 @@
+[
+  {
+    "source": "intro_llm.txt",
+    "text": "Grandes Modelos de Linguagem (LLMs) são redes neurais treinadas em vastos corpora de texto. Eles aprendem padrões estatísticos da linguagem e são capazes de gerar texto coerente, responder perguntas e realizar tradução automática. Exemplos populares incluem GPT-4, Claude e Gemini."
+  },
+  {
+    "source": "intro_llm.txt",
+    "text": "O processo de treinamento de um LLM envolve pré-treinamento em grandes quantidades de dados não rotulados, seguido de fine-tuning supervisionado e alinhamento via RLHF (Reinforcement Learning from Human Feedback). Esse processo garante que o modelo seja útil e seguro."
+  },
+  {
+    "source": "rag_overview.txt",
+    "text": "RAG (Retrieval-Augmented Generation) é uma arquitetura que combina recuperação de informação com geração de texto. Em vez de depender apenas do conhecimento memorizado durante o treinamento, o modelo busca documentos relevantes em uma base de conhecimento externa e usa essas informações para gerar respostas mais precisas e atualizadas."
+  },
+  {
+    "source": "rag_overview.txt",
+    "text": "O RAG básico (naive RAG) segue três etapas: (1) indexação dos documentos em embeddings vetoriais; (2) recuperação dos chunks mais similares à pergunta; (3) geração da resposta condicionada ao contexto recuperado. Sua principal limitação é depender apenas de similaridade semântica, o que pode falhar quando a pergunta contém termos técnicos específicos."
+  },
+  {
+    "source": "hybrid_rag.txt",
+    "text": "O Hybrid RAG combina busca densa (vetorial/semântica) com busca esparsa (por palavras-chave, como BM25). A busca densa captura o significado geral da consulta, enquanto a busca esparsa garante que termos exatos e nomes técnicos sejam encontrados mesmo que o embedding não os capture bem."
+  },
+  {
+    "source": "hybrid_rag.txt",
+    "text": "A fusão dos resultados no Hybrid RAG pode ser feita por Reciprocal Rank Fusion (RRF) ou por score relativo. O RRF combina os rankings das duas buscas atribuindo pontuações inversamente proporcionais à posição de cada documento. Isso torna o sistema mais robusto do que qualquer método isolado."
+  },
+  {
+    "source": "hybrid_rag.txt",
+    "text": "O Qdrant suporta nativamente vetores esparsos e densos na mesma coleção. Isso permite executar buscas híbridas sem necessidade de múltiplos bancos de dados. A query de fusão com RRF pode ser configurada diretamente via API, tornando a implementação de Hybrid RAG simples e eficiente."
+  },
+  {
+    "source": "embeddings.txt",
+    "text": "Embeddings são representações vetoriais de texto em espaço de alta dimensão. Textos semanticamente similares ficam próximos nesse espaço. Modelos como sentence-transformers geram embeddings de boa qualidade para português e inglês. O tamanho do vetor (dimensão) varia de 384 a 1536 dependendo do modelo."
+  },
+  {
+    "source": "embeddings.txt",
+    "text": "BM25 é um algoritmo clássico de recuperação baseado em frequência de termos (TF) e frequência inversa de documentos (IDF). Ele pontua documentos baseando-se em quantas vezes os termos da query aparecem no documento, penalizando documentos muito longos. É altamente eficaz para termos técnicos e nomes próprios."
+  },
+  {
+    "source": "vector_db.txt",
+    "text": "Bancos de dados vetoriais como Qdrant, Chroma e Pinecone são otimizados para armazenar e buscar vetores de alta dimensão com baixa latência. Eles usam índices como HNSW (Hierarchical Navigable Small World) para realizar buscas aproximadas de vizinhos mais próximos (ANN) de forma eficiente."
+  },
+  {
+    "source": "vector_db.txt",
+    "text": "O Qdrant é um banco vetorial open-source escrito em Rust, com suporte a filtros, payload, vetores múltiplos por ponto e busca híbrida nativa. Pode ser usado localmente via Docker ou na nuvem. Sua API é compatível com Python, JavaScript e REST, facilitando a integração em qualquer stack."
+  },
+  {
+    "source": "chunking.txt",
+    "text": "Chunking é o processo de dividir documentos em pedaços menores (chunks) antes de indexar. Chunks menores aumentam a precisão da recuperação, mas podem perder contexto. Chunks maiores preservam contexto, mas reduzem a precisão. O tamanho ideal depende do tipo de documento e do modelo de embedding."
+  },
+  {
+    "source": "chunking.txt",
+    "text": "Estratégias comuns de chunking incluem: divisão por tamanho fixo com sobreposição, divisão por parágrafos ou seções, chunking semântico (baseado em coesão temática) e chunking hierárquico. O Hierarchical RAG usa múltiplos níveis de chunks, buscando primeiro em resumos e depois nos detalhes."
+  }
+]
