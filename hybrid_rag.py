@@ -37,7 +37,7 @@ import json
 # Configurações
 # ─────────────────────────────────────────────
 QDRANT_URL = os.getenv("QDRANT_URL", "http://localhost:6333")
-MARITACA_API_KEY = "106731539683870700861_3120f713d0518a3e"
+MARITACA_API_KEY = "SUA CHAVE DA API"
 MARITACA_API_URL = "https://chat.maritaca.ai/api/chat/completions"
 COLLECTION_NAME = "hybrid_rag_docs"
 EMBED_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
